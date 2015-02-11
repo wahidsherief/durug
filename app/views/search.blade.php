@@ -1,13 +1,12 @@
 @extends('layout.default')
 
 @section('mainSection')
-<div class="col-md-12">
-<p><a href="{{ URL::to('/') }}"><h1  class='pull-right site-name'><i class='fa fa-home'></i> Club Hub</h1></a></p>
-<br><br>
-<div class="col-md-12">
+<div><button class="pull-right btn btn-default btn-login">Login</button></div>
+<div class="clearfix"></div>
+<br>
 <div class="col-md-2 navbar">
 	<div class="search-text col-md-11 navbar">
-		<center><i class="fa fa-search"></i><p style='margin-top:10px'>Find Club</p></center>
+		<a href="{{ URL::to('/') }}"><center><i class="fa fa-home"></i><p style='margin-top:10px'>Club Hub</p></center></a>
 	</div>
 </div>
 <nav class="navbar search-container col-md-10 col-sm-12 col-xs-12 pull-right">
@@ -52,21 +51,21 @@
 	            <td>John</td>
 	            <td>Carter</td>
 	            <td>johncarter@mail.com</td>
-	            <td>Lorem</td>
+	            <td><button class="btn bid-button">Book Now</button></td>
 	        </tr>
 	        <tr>
 	            <td>2</td>
 	            <td>Peter</td>
 	            <td>Parker</td>
 	            <td>peterparker@mail.com</td>
-	            <td>Vestibulum</td>
+	            <td><button class="btn bid-button">Book Now</button></td>
 	        </tr>
 	        <tr>
 	            <td>3</td>
 	            <td>John</td>
 	            <td>Rambo</td>
 	            <td>johnrambo@mail.com</td>
-	            <td>Integer</td>
+	            <td><button class="btn bid-button">Book Now</button></td>
 	        </tr>
 	    </tbody>
 	</table>
@@ -74,4 +73,63 @@
 	</div>
 </div>
 </div>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><i class="fa fa-phone"></i> Enter Your Phone Number</h4>
+      </div>
+      <form action="{{ URL::to('/clublist') }}">
+	      <div class="modal-body phoneField">
+	        <input type="text">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	        <button type="submit" class="btn btn-site">Save changes</button>
+	      </div>
+      </form>
+      <div class="modal-header">
+      	<h4 class="modal-title"><i class="fa fa-clipboard"></i> Get Registered</h4>
+      </div>
+      <div class="modal-body registration">
+      	<form action="">
+      		<div class="form-group">
+      			<label for="">Choose Your Type</label>  &nbsp;
+	      			<input type="checkbox" class='default-checkbox'> <span>Normal User</span> &nbsp;
+	      			<input type="checkbox" class='default-checkbox'> <span>Media</span>
+      		</div>
+      		<div class="form-group">
+      			<label for="">User Name</label>
+      			<br>
+      			<input type="text" class='form-control'>
+      		</div>
+      		<div class="form-group">
+      			<label for="">Email</label>
+      			<br>
+      			<input type="email" class='form-control'>
+      		</div>
+      		<div class="form-group">
+      			<label for="">Address</label>
+      			<br>
+      			<textarea class='form-control' name="" id="" cols="30" rows="5"></textarea>
+      		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-site">Register</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+@section('js')
+<script>
+	$(document).ready(function(){
+		$('.bid-button').click(function(){
+			$('#myModal').modal('show');
+		})
+	})
+</script>
+@stop
 @stop

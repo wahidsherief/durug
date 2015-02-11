@@ -1,5 +1,6 @@
-html,body,p,h1,h2,h3,h4,h5,h6,ul,li,a,div,span{
+html,body,p,h1,h2,h3,h4,h5,h6,ul,li,a,div,span,button{
 	font-family: 'Open Sans', sans-serif !important;
+	text-transform: capitalize !important;
 }
 
 a, a:hover{
@@ -64,6 +65,10 @@ body{
 	margin-top: 20px;
 }
 
+.gap-right{
+	margin-right: 20px;
+}
+
 .sticky-wrapper{
 	height: 57px !important;
 }
@@ -74,7 +79,7 @@ body{
 
 .nonHomePageContainer{
 	min-height: 400px;
-	padding-top: 30px;
+	padding: 20px;
 }
 
 .search-container{
@@ -88,7 +93,7 @@ body{
 }
 
 .navbar-form{
-	padding: 0px 37px 6px;
+	padding: 0px 30px 6px;
 }
 
 .site-name{
@@ -105,12 +110,19 @@ body{
 	color: #fff;
 }
 
-.search-button:hover{
+.bid-button{
+	background: rgba(118,35,100,.8);
+	color: #fff;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.search-button:hover, .bid-button:hover{
 	color:#fff;
 	background: rgba(118,35,100,1);
 }
 
-input.form-control,input.form-control:focus {
+.form-control,.form-control:focus {
     box-shadow: none;
    -webkit-box-shadow: none;
    -moz-box-shadow: none;
@@ -118,7 +130,7 @@ input.form-control,input.form-control:focus {
    -webkit-transition: none;
 }
 
-input.form-control:focus{
+.form-control:focus{
 	border-color: #762364;
 }
 
@@ -163,4 +175,85 @@ input.form-control:focus{
 	font-size: 27px;
 	height: 84px;
 	color: #762364;
+}
+
+.phoneField{
+	padding: 0;
+	height: 60px;
+}
+
+.phoneField input, .phoneField select{
+	height: 60px;
+	border: none;
+	font-size: 60px;
+	font-weight: normal;
+	color: #000;
+	width: 100%;
+}
+
+.modal-title{
+	color: #762364;
+}
+
+.btn-site{
+	background: rgba(118,35,100,.8);
+	color: #fff;
+}
+
+.btn-site:hover{
+	background: rgba(118,35,100,1);
+	color: #fff;
+}
+
+.btn-login,.btn-logout{
+	color: rgba(118,35,100,1);
+	border: 1px solid rgba(118,35,100,1);
+	text-transform: capitalize;
+}
+
+.btn-login:hover{
+	background: whitesmoke;
+	border: 1px solid rgba(118,35,100,1);
+}
+
+.btn-logout:hover{
+	background: #C9302C;
+	border: 1px solid #C9302C;
+	color: #fff;
+}
+
+.userName, .userAddress{
+	margin: 0;
+}
+
+.userName{
+	color: #762364;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.userAddress{
+	font-size: 13px;
+	color: #000;
+}
+
+.profileContainer{
+	padding: 5px 15px;
+	border: 1px solid #ccc;
+	background: whitesmoke;
+	max-height: 85px;
+}
+
+.registration{
+	padding: 20px 45px;
+}
+
+.registration label{
+	font-size: 13px;
+	color: #762364;
+	font-weight: normal;
+}
+
+.registration span{
+	font-size: 13px;
 }

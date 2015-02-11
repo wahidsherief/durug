@@ -20,3 +20,8 @@ Route::get('/search', function()
 {
 	return View::make('search');
 });
+
+Route::get('clublist', function()
+{
+	return View::make('clublist');
+});

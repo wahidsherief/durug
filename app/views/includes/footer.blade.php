@@ -27,7 +27,7 @@
     
     <script src="js/custom.js"></script>
     <script src="js/css3-animate-it.js"></script>
-
+    @yield('js')
 </body>
 
 </html>
