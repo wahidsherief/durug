@@ -1,0 +1,166 @@
+html,body,p,h1,h2,h3,h4,h5,h6,ul,li,a,div,span{
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+a, a:hover{
+	color:inherit;
+}
+body{
+	background: #fff;
+}
+
+#navigation{
+	border-top: 5px solid #762364;
+}
+
+#intro{
+	background: #762364;
+}
+
+.navbar-custom ul.nav li a {
+	font-weight: normal;
+}
+
+.hero h1{
+	color: #fff;
+	letter-spacing: normal;
+	font-weight: normal;
+	font-size: 60px;
+}
+
+.hero p{
+	color: #fff;
+}
+
+.btn-circle{
+	padding: 6px 16px;
+	border-radius: 100px;
+	font-size: 24px;
+	border-color: #fff;
+}
+
+#down-arrow, #down-arrow:hover{
+	color: #fff;
+}
+
+#about{
+	background: #eee;
+}
+
+.btn-find{
+	padding: 10px 26px;
+	border-radius: 5px;
+	font-size: 24px;
+	border-color: #fff;
+	color:#fff;
+}
+
+.btn-find:hover{
+	color:#762364;
+	background: #fff;
+}
+
+.gap{
+	margin-top: 20px;
+}
+
+.sticky-wrapper{
+	height: 57px !important;
+}
+
+.navbar{
+	padding: 0;
+}
+
+.nonHomePageContainer{
+	min-height: 400px;
+	padding-top: 30px;
+}
+
+.search-container{
+	border: 1px solid #ccc;
+	background: whitesmoke;
+}
+
+.search-container label{
+	font-size: 15px;
+	color: #762364;
+}
+
+.navbar-form{
+	padding: 0px 37px 6px;
+}
+
+.site-name{
+	color:#762364;
+	margin-right: 12px;
+}
+
+.search-button{
+	background: rgba(118,35,100,.8);
+	color: #fff;
+	margin-top: 27px;
+	margin-left: 5px;
+	text-transform: capitalize;
+	color: #fff;
+}
+
+.search-button:hover{
+	color:#fff;
+	background: rgba(118,35,100,1);
+}
+
+input.form-control,input.form-control:focus {
+    box-shadow: none;
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;
+   -moz-transition: none;
+   -webkit-transition: none;
+}
+
+input.form-control:focus{
+	border-color: #762364;
+}
+
+.searchResultContainer{
+	min-height: 500px;
+	background: whitesmoke;
+	border: 1px solid #ccc;
+	border-radius:3px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.searchResultTable{
+	font-size: 14px;
+	color: #000;
+}
+
+.searchResultTable th{
+	color: #762364;
+}
+
+@media only screen and (max-width : 900px) {
+ .navbar{
+ 	padding: 5px;
+ }
+ .search-button{
+ 	margin-left: 0px
+ }
+}
+
+@media only screen and (max-width : 1200px) {
+ .search-text{
+ 	display: none
+ }
+}
+
+.search-text{
+	background-color: whitesmoke;
+	border: 1px solid #ccc;
+	padding: 14px;
+	padding-top: 5px;
+	font-size: 27px;
+	height: 84px;
+	color: #762364;
+}
