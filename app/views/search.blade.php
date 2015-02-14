@@ -80,45 +80,55 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title"><i class="fa fa-phone"></i> Enter Your Phone Number</h4>
       </div>
-      <form action="{{ URL::to('/clublist') }}">
+      {{ Form::open() }}
 	      <div class="modal-body phoneField">
-	        <input type="text">
+	        <input type="text" name='mobileNo'>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 	        <button type="submit" class="btn btn-site">Save changes</button>
 	      </div>
-      </form>
+      {{ Form::close() }}
       <div class="modal-header">
       	<h4 class="modal-title"><i class="fa fa-clipboard"></i> Get Registered</h4>
       </div>
       <div class="modal-body registration">
-      	<form action="">
+      	{{ Form::open(array('url' => '/registration')) }}
+          <input name='phone' type="hidden" value='@if(isset($mobileNo)) {{ $mobileNo }} @endif'>
       		<div class="form-group">
       			<label for="">Choose Your Type</label>  &nbsp;
-	      			<input type="checkbox" class='default-checkbox'> <span>Normal User</span> &nbsp;
-	      			<input type="checkbox" class='default-checkbox'> <span>Media</span>
-      		</div>
+              @if(isset($usersType))
+                @foreach( $usersType as $type )
+	      			    <input name='type_id' type="checkbox" class='default-checkbox' value='{{ $type->id }}'> <span>{{ $type->type }}</span> &nbsp;
+                @endforeach
+      		    @endif
+          </div>
       		<div class="form-group">
       			<label for="">User Name</label>
       			<br>
-      			<input type="text" class='form-control'>
+      			<input type="text" class='form-control' name='name'>
       		</div>
+          <div class="form-group">
+            <label for="">Password</label>
+            <br>
+            <input type="password" class='form-control' name='password'>
+          </div>
       		<div class="form-group">
       			<label for="">Email</label>
       			<br>
-      			<input type="email" class='form-control'>
+      			<input type="email" class='form-control' name='email'>
       		</div>
       		<div class="form-group">
       			<label for="">Address</label>
       			<br>
-      			<textarea class='form-control' name="" id="" cols="30" rows="5"></textarea>
+      			<textarea class='form-control' id="" cols="30" rows="5" name='address'></textarea>
       		</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-site">Register</button>
       </div>
+      {{ Form::close() }}
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

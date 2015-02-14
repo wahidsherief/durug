@@ -25,3 +25,11 @@ Route::get('clublist', function()
 {
 	return View::make('clublist');
 });
+
+Route::post('search',[
+  'uses' => 'MainController@viewRegistrationForm'
+]);
+
+Route::post('registration',[
+  'uses' => 'MainController@doRegistration'
+]);
